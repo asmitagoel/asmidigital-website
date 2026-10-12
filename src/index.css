@@ -1,0 +1,65 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-display: 'Cormorant Garamond', 'Georgia', serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+
+  --color-brand-50: #fdf3f4;
+  --color-brand-100: #fbe6e9;
+  --color-brand-200: #f4c7cd;
+  --color-brand-300: #e79ba6;
+  --color-brand-400: #d66a7a;
+  --color-brand-500: #b94456;
+  --color-brand-600: #983143;
+  --color-brand-700: #78233a;
+  --color-brand-800: #591b2c;
+  --color-brand-900: #3d1420;
+  --color-brand-950: #260d15;
+
+  --color-cream-50: #fffdfa;
+  --color-cream-100: #fdf8ef;
+  --color-cream-200: #f8efdd;
+  --color-cream-300: #f0e2c8;
+
+  --animate-fade-up: fade-up 0.7s ease-out both;
+  --animate-fade-in: fade-in 0.8s ease-out both;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(18px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-cream-50);
+  color: var(--color-brand-950);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+::selection {
+  background-color: var(--color-brand-300);
+  color: var(--color-brand-950);
+}
